@@ -3,7 +3,11 @@ const postModel = require('../models/postModel');
 class PostController {
   createPost(data) {
     return new Promise(
+<<<<<<< HEAD
       async (resolve, reject) => {
+=======
+      (resolve, reject) => {
+>>>>>>> 34ebe1765697f7481654c26ea7dc67c93ff974ec
         try {
           const newPost = new postModel(
             {
@@ -13,7 +17,11 @@ class PostController {
               tags: data.tags
             }
           )
+<<<<<<< HEAD
           await newPost.save().then(
+=======
+          newPost.save().then(
+>>>>>>> 34ebe1765697f7481654c26ea7dc67c93ff974ec
             () => {
               resolve(
                 {
